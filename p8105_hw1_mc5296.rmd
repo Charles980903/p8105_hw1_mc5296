@@ -6,7 +6,7 @@ date: "2022-09-15"
 
 # Download the package containing the penguins dataset:
 
-```{r setup, include=FALSE}
+```{r}
 install.packages("palmerpenguins")
 ```
 
@@ -23,6 +23,13 @@ summary(penguins)
 ncol(penguins)
 nrow(penguins)
 ```
-There are penguins' species,island and their bill length, bill depth, flipper length,body mass,sex,and year in the dataset. There are 8 columns and 344 rows. The mean of flipper length is 200.9 mm.
+There are penguins' species,island and their bill length, bill depth, flipper length,body mass,sex,and year in the dataset. There are 8 columns and 344 rows,so it is a 344*8 dataset. The mean of flipper length is 200.9 mm.
 
+#scatter plot
+```{r}
+library(ggplot2)
+ggplot(data = penguins) + geom_point(mapping = aes(x = bill_length_mm, y = flipper_length_mm, color = species))
+ggsave("scatter_plot.pdf", height = 4, width = 6)
+```
+# Problem 2
 
