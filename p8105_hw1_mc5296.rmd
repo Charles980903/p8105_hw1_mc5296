@@ -51,7 +51,7 @@ The mean function works for random sample, logical vector, character vector and 
 
 ## Convert Variable
 
-```{r}
+```{r eval=FALSE}
 as.numeric(df$x1)
 as.numeric(df$vec_logical)
 as.numeric(df$vec_char)
